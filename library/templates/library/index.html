@@ -1,0 +1,12 @@
+<h1>图书馆名:{{ library.library_name}}</h1>
+<h3>图书馆地址:{{ library.library_address }}</h3>
+<h3>图书馆电话:{{ library.library_phone }}</h3>
+<br/>
+<h3>作者列表:</h3>
+<ul>
+    {% for author in authors %}
+    <li>
+        <a href="{% url 'author' author.id %}">{{ author.author_name }}</a>
+    </li>
+    {% endfor %}
+</ul>

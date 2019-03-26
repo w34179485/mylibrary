@@ -19,5 +19,6 @@ from library import views
 
 urlpatterns = [
     path('',views.index,name='index'),
+    path('author/<int:author_id>/',views.author,name='author'),
     path('admin/', admin.site.urls),
 ]
